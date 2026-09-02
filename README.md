@@ -22,10 +22,10 @@ This is Part 1 of the project. Only the "Report Issues" feature has been impleme
 
 ## How to Run
 
-Option A - From Visual Studio:
+Option A : From Visual Studio:
 Press F5 to launch the application in Debug mode.
 
-Option B - From the compiled executable:
+Option B : From the compiled executable:
 Go to MunicipalServicesApp\bin\Debug\ and run MunicipalServicesApp.exe directly.
 
 ## How to Use
@@ -83,5 +83,4 @@ Note: the data is not saved to disk. All reports are lost once the application i
 - Local Events and Announcements and Service Request Status are not implemented yet and are disabled.
 - Reported issues are not saved permanently, they are lost when the app closes.
 
----
-Programming 3B / Advanced Application Development - PROG7312/w, AAPD7112/w
+

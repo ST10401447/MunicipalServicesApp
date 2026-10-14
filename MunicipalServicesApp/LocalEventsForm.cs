@@ -18,7 +18,7 @@ namespace MunicipalServicesApp
             InitializeComponent();
 
             // Settings for the controls
-            // pressing Enter will search
+    
             AcceptButton = btnSearch;     
 
             txtSearch.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
@@ -107,8 +107,9 @@ namespace MunicipalServicesApp
 
         private void btnDismiss_Click(object sender, EventArgs e)
         {
-            manager.DismissAnnouncement();   // removes the top announcement
-            ShowAnnouncement();              // shows the next one
+            // removes the top announcement
+            manager.DismissAnnouncement();   
+            ShowAnnouncement();              
         }
 
         // Picking a day automatically ticks "Filter by date"

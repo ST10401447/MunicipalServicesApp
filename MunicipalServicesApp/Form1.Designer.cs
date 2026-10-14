@@ -42,19 +42,21 @@
             btnReportIssues.UseVisualStyleBackColor = false;
             btnReportIssues.Click += btnReportIssues_Click;
             // 
+            
             // btnLocalEvents
             // 
-            btnLocalEvents.Enabled = false;
+            btnLocalEvents.Cursor = Cursors.Hand;
             btnLocalEvents.FlatAppearance.BorderSize = 0;
             btnLocalEvents.FlatStyle = FlatStyle.Flat;
-            btnLocalEvents.Font = new Font("Segoe UI", 11F);
+            btnLocalEvents.Font = new Font("Segoe UI Semibold", 11.5F);
             btnLocalEvents.Location = new Point(36, 232);
             btnLocalEvents.Name = "btnLocalEvents";
             btnLocalEvents.Size = new Size(748, 64);
             btnLocalEvents.TabIndex = 3;
-            btnLocalEvents.Text = "  Local Events & Announcements   (Coming soon)";
+            btnLocalEvents.Text = "  Local Events and Announcements";
             btnLocalEvents.TextAlign = ContentAlignment.MiddleLeft;
             btnLocalEvents.UseVisualStyleBackColor = false;
+            btnLocalEvents.Click += btnLocalEvents_Click;
             // 
             // btnServiceStatus
             // 

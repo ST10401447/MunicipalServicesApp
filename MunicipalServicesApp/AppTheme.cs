@@ -6,9 +6,9 @@ namespace MunicipalServicesApp
     public static class AppTheme
     {
         // Core palette
-        public static readonly Color BackgroundGray = Color.FromArgb(241, 245, 249); // slate-100
+        public static readonly Color BackgroundGray = Color.FromArgb(241, 245, 249); 
         public static readonly Color SurfaceWhite = Color.White;
-        public static readonly Color PrimaryBlue = Color.FromArgb(15, 76, 129);   // deep professional blue
+        public static readonly Color PrimaryBlue = Color.FromArgb(15, 76, 129);   
         public static readonly Color PrimaryBlueLight = Color.FromArgb(226, 239, 255);
         public static readonly Color AccentTeal = Color.FromArgb(13, 148, 136);
         public static readonly Color AccentTealLight = Color.FromArgb(204, 251, 241);

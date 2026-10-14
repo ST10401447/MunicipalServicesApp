@@ -9,6 +9,7 @@ namespace MunicipalServicesApp
         public Form1()
         {
             InitializeComponent();
+
             ApplyModernTheme();
             ApplyRoundedCorners();
             WireHoverEffects();
@@ -21,8 +22,8 @@ namespace MunicipalServicesApp
             pnlContent.Paint += PnlContent_Paint;
 
             StylePrimaryButton(btnReportIssues, AppTheme.PrimaryBlue, AppTheme.PrimaryBlueLight);
-            StylePrimaryButton(btnViewIssues, AppTheme.AccentTeal, AppTheme.AccentTealLight);
-            StyleDisabledButton(btnLocalEvents);
+            StylePrimaryButton(btnViewIssues, Color.FromArgb(15, 118, 110), AppTheme.AccentTealLight);
+            StylePrimaryButton(btnLocalEvents, Color.FromArgb(180, 83, 9), Color.FromArgb(254, 243, 199));
             StyleDisabledButton(btnServiceStatus);
 
             picHeaderLogo.Image = AppTheme.ResizeIcon(Resources.city_hall, 44);
@@ -104,6 +105,7 @@ namespace MunicipalServicesApp
         {
             AddHover(btnReportIssues, AppTheme.PrimaryBlueLight, Color.FromArgb(210, 230, 255));
             AddHover(btnViewIssues, AppTheme.AccentTealLight, Color.FromArgb(190, 245, 235));
+            AddHover(btnLocalEvents, Color.FromArgb(254, 243, 199), Color.FromArgb(253, 230, 138));
         }
         private void AddHover(Button btn, Color normal, Color hover)
         {
@@ -150,6 +152,12 @@ namespace MunicipalServicesApp
                 ApplyRoundedCorners();
         }
 
-      
+        private void btnLocalEvents_Click(object sender, EventArgs e)
+        {
+            Hide();
+            LocalEventsForm events = new LocalEventsForm();
+            events.ShowDialog();
+            Show();
+        }
     }
 }

@@ -1,5 +1,6 @@
 # Municipal Services Application
 
+# Part 1
 This is a C# Windows Forms application built for a South African municipality. It allows citizens to report service issues (like sanitation, roads, and utilities problems) through a simple interface.
 
 This is Part 1 of the project. Only the "Report Issues" feature has been implemented. "Local Events and Announcements" and "Service Request Status" are disabled for now and will be added in a later part of the project.

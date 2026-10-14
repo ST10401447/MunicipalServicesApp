@@ -85,6 +85,8 @@ Note: the data is not saved to disk. All reports are lost once the application i
 - Reported issues are not saved permanently, they are lost when the app closes.
 
 
+
+
 # Part 2: Local Events and Announcements
 
 ## 1. What was added in Part 2
@@ -99,6 +101,8 @@ The new page has these features:
 - An **announcement banner** at the top that shows the most urgent announcement first.
 - A **Recommended for you** box that suggests events and shows the reason for each suggestion.
 - A **Recently viewed** box that lists the events the user opened.
+
+---
 
 ## 2. Requirements, how to compile and how to run
 
@@ -118,6 +122,8 @@ Requirements are the same as Part 1:
 
 1. Press **F5**. The main menu opens.
 2. Click **Local Events and Announcements**. The new page opens.
+
+---
 
 ## 3. How to use the Local Events and Announcements page
 
@@ -154,6 +160,8 @@ The **Recently viewed** box lists the events the user opened, with the newest ev
 
 Click **Back to Menu** to go back to the main menu. The window can be minimised, maximised and made bigger or smaller.
 
+---
+
 ## 4. Data structures used
 
 All the data structures are in `EventManager.cs`.
@@ -169,6 +177,8 @@ All the data structures are in `EventManager.cs`.
 | `Queue<string>` | Remembers the last searches (first in, first out) for the search suggestions. |
 | `Stack<EventItem>` | Remembers the events the user opened (last in, first out) for **Recently viewed**. |
 
+---
+
 ## 5. How the recommendation feature works
 
 1. When the user **searches**, the program remembers the words and the category that were used. It counts them in dictionaries.
@@ -181,9 +191,13 @@ Example: when the user opens the **Charity Fun Run** (Sports), the page recommen
 
 The page only leaves out the event that is open at that moment, so an event that was opened earlier can be recommended again.
 
+---
+
 ## 6. Sample data
 
 The program starts with 12 sample events and 4 announcements, which are created in `EventManager.cs`. The event dates are worked out from today's date, so there are always upcoming events when the program runs. This means the dates on the screen change from day to day.
+
+---
 
 ## 7. Suggested test steps
 
@@ -195,6 +209,8 @@ The program starts with 12 sample events and 4 announcements, which are created 
 6. Click the button on the right of the banner. The next announcement is shown.
 7. Click **Back to Menu**. The main menu opens again.
 
+---
+
 ## 8. Files for Part 2
 
 | File | Purpose |
@@ -204,11 +220,15 @@ The program starts with 12 sample events and 4 announcements, which are created 
 | `LocalEventsForm.cs` and `LocalEventsForm.Designer.cs` | The Local Events and Announcements page. |
 | `Form1.cs` | Changed so the Local Events and Announcements button is enabled and opens the new page. |
 
+---
+
 ## 9. Limitations
 
 - The events, announcements, searches and viewed events are only kept in memory. They are lost when the application is closed.
 - Users cannot add their own events or announcements yet.
 - **Service Request Status** will be added in a later part.
+
+---
 
 ## 10. Troubleshooting
 
@@ -216,3 +236,5 @@ The program starts with 12 sample events and 4 announcements, which are created 
 |---|---|
 | `PriorityQueue` cannot be found | Right-click the project, choose **Properties** and set **Target framework** to **.NET 8.0** (or .NET 6.0). |
 | The dates on the screen are different from the screenshots | This is normal. The sample dates are created from today's date. |
+
+

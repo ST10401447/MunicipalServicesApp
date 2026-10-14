@@ -388,7 +388,6 @@ namespace MunicipalServicesApp
 
         // The searched word with the most points that appears in this event ("" if none)
       
-        // How related is "other" to the event the user opened last?
         private int GetSimilarity(EventItem last, EventItem other)
         {
             int points = 0;

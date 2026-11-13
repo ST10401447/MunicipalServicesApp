@@ -2,7 +2,7 @@ MUNICIPAL SERVICES APPLICATION - PART 3
 =======================================
 
 1. WHAT THIS PROGRAMME IS
--------------------------
+
 A C# Windows Forms application for South African municipal services. Residents can:
   - Report Issues (Part 1)
   - View Reported Issues (Part 1)
@@ -10,14 +10,14 @@ A C# Windows Forms application for South African municipal services. Residents c
   - Track Service Requests (Part 3 which is this submission)
 
 2. SYSTEM REQUIREMENTS
-----------------------
+
   - Windows 10 or Windows 11
   - Visual Studio 2022 with the ".NET desktop development" workload
   - The .NET SDK version targeted by the project (open MunicipalServicesApp.csproj
     and read the <TargetFramework> line)
 
 3. HOW TO COMPILE
------------------
+
   1. Unzip the submission folder.
   2. Double-click MunicipalServicesApp.sln to open it in Visual Studio 2022.
   3. Wait for NuGet to finish restoring (bottom-left status bar).
@@ -26,12 +26,12 @@ A C# Windows Forms application for South African municipal services. Residents c
      show "Build succeeded" with 0 errors.
 
 4. HOW TO RUN
--------------
+
   1. Press F5 (Debug > Start Debugging), or Ctrl + F5 to run without debugging.
   2. The Municipal Services Portal main menu opens.
 
 5. HOW TO USE THE SERVICE REQUEST STATUS FEATURE
-------------------------------------------------
+
 Click "Service Request Status" on the main menu.
 
   Seed data: 16 sample requests (SR-1001 to SR-1016) are loaded at start-up so
@@ -75,7 +75,7 @@ Click "Service Request Status" on the main menu.
   Press Back to Menu to return to the main menu.
 
 6. DATA STRUCTURES AND WHERE THEY LIVE
---------------------------------------
+
   ServiceRequest.cs          Model for one service request
   GeneralTree.cs             Basic tree: Root > Category > Requests
   BinaryTree.cs              Binary tree filled level by level
@@ -89,9 +89,49 @@ Click "Service Request Status" on the main menu.
   IssueManager.cs            Part 1 store; now also creates service requests
 
 7. TROUBLESHOOTING
-------------------
+
   - "Build failed": open View > Error List, fix the first error, rebuild.
   - A form looks blurry: set Windows display scaling to 100% or 125%.
   - Nothing happens on the main menu button: make sure the project was
     rebuilt (Ctrl + Shift + B) after pulling the latest code.
   - Data is stored in memory only, so requests reset when the programme closes.
+
+  PART 1 FEEDBACK
+
+Feedback received:
+The lecturer was happy with the five user engagement strategies provided. They were relevant to municipal services applications.
+
+Update made:
+The five user engagement strategies were kept and used to guide the design of the application.
+
+Where in the code:
+Main menu and user interface implementation.
+
+Feedback received:
+The lecturer mentioned that the application uses appropriate data structures, but there is still room for improvement. The README file also contains useful information but could include more detail.
+
+Update made:
+The data structures were reviewed and used more consistently. Additional explanations were also included to make the project easier to understand and use.
+
+Where in the code:
+IssueManager.cs and README.md.
+
+PART 2 FEEDBACK
+
+Feedback received:
+The lecturer was satisfied with the Local Events and Announcements page. The stacks, queues and priority queues were implemented correctly and used to manage event-related information.
+
+Update made:
+The data structures were maintained and used to organise and manage event information.
+
+Where in the code:
+LocalEventsForm.cs and related data structure classes.
+
+Feedback received:
+The lecturer was happy with the use of hash tables, dictionaries and sets. They were also satisfied with how the recommendation feature analyses user search patterns and preferences to suggest related events.
+
+Update made:
+The search and recommendation features were maintained to help users find relevant events more easily.
+
+Where in the code:
+LocalEventsForm.cs and related search and recommendation classes.

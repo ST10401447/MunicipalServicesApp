@@ -50,25 +50,25 @@ Click "Service Request Status" on the main menu.
      - Status: shows only requests in one status.
      - Sort by: request number (AVL tree), most urgent first (heap sort) or
        newest first (red-black tree).
-     - Click any row to see its full details and progress history.
-     - To change a status, select a request, choose a New status and press
+      Click any row to see its full details and progress history.
+      To change a status, select a request, choose a New status and press
        Update Status. The history and progress bar update immediately.
 
   C. Urgent Queue (Heap) tab
-     - Shows the 10 most urgent open requests. Priority 1 is the most urgent.
+      Shows the 10 most urgent open requests. Priority 1 is the most urgent.
 
   D. Related Requests (Graph) tab
-     - Choose a request in the drop-down, then press Breadth-First Search or
+      Choose a request in the drop-down, then press Breadth-First Search or
        Depth-First Search to list the requests related to it.
-     - Requests are related if they share a category or are within 5 km.
+      Requests are related if they share a category or are within 5 km.
 
   E. Route Planner (Spanning Tree) tab
-     - Press Build with Kruskal or Build with Prim. Both list the links that
+     Press Build with Kruskal or Build with Prim. Both list the links that
        connect all related requests with the least total distance. The total
        distance is the same for both algorithms.
 
   F. Data Structure Insights tab
-     - Shows the height of every tree, the number of AVL rotations, whether
+      Shows the height of every tree, the number of AVL rotations, whether
        the red-black rules hold, and graph statistics. Press Refresh Insights
        after changing a status.
 

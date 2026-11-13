@@ -13,6 +13,9 @@ namespace MunicipalServicesApp
             ApplyModernTheme();
             ApplyRoundedCorners();
             WireHoverEffects();
+
+            // ADDED: connects the Service Request Status button to its click handler
+            btnServiceStatus.Click += btnServiceStatus_Click;
         }
         private void ApplyModernTheme()
         {
@@ -24,7 +27,11 @@ namespace MunicipalServicesApp
             StylePrimaryButton(btnReportIssues, AppTheme.PrimaryBlue, AppTheme.PrimaryBlueLight);
             StylePrimaryButton(btnViewIssues, Color.FromArgb(15, 118, 110), AppTheme.AccentTealLight);
             StylePrimaryButton(btnLocalEvents, Color.FromArgb(180, 83, 9), Color.FromArgb(254, 243, 199));
-            StyleDisabledButton(btnServiceStatus);
+
+            // CHANGED: the button is now active and styled like the others (was StyleDisabledButton)
+            btnServiceStatus.Enabled = true;
+            btnServiceStatus.Text = "Service Request Status";
+            StylePrimaryButton(btnServiceStatus, Color.FromArgb(91, 33, 182), Color.FromArgb(237, 233, 254));
 
             picHeaderLogo.Image = AppTheme.ResizeIcon(Resources.city_hall, 44);
             picHeaderLogo.BackColor = Color.Transparent;
@@ -75,17 +82,9 @@ namespace MunicipalServicesApp
             btn.Font = new Font("Segoe UI Semibold", 11.5f);
             btn.Cursor = Cursors.Hand;
         }
-        private void StyleDisabledButton(Button btn)
-        {
-            btn.BackColor = AppTheme.DisabledBg;
-            btn.ForeColor = AppTheme.DisabledText;
-            btn.FlatStyle = FlatStyle.Flat;
-            btn.FlatAppearance.BorderSize = 0;
-            btn.FlatAppearance.MouseOverBackColor = AppTheme.DisabledBg;
-            btn.FlatAppearance.MouseDownBackColor = AppTheme.DisabledBg;
-            btn.Cursor = Cursors.Default;
-            btn.Font = new Font("Segoe UI", 11f);
-        }
+
+        // REMOVED: StyleDisabledButton is no longer needed because every menu button is now active
+
         private void ApplyRoundedCorners()
         {
             MakeRounded(pnlContent, 16);
@@ -106,6 +105,9 @@ namespace MunicipalServicesApp
             AddHover(btnReportIssues, AppTheme.PrimaryBlueLight, Color.FromArgb(210, 230, 255));
             AddHover(btnViewIssues, AppTheme.AccentTealLight, Color.FromArgb(190, 245, 235));
             AddHover(btnLocalEvents, Color.FromArgb(254, 243, 199), Color.FromArgb(253, 230, 138));
+
+            // ADDED: hover colours for the Service Request Status button
+            AddHover(btnServiceStatus, Color.FromArgb(237, 233, 254), Color.FromArgb(221, 214, 254));
         }
         private void AddHover(Button btn, Color normal, Color hover)
         {
@@ -158,6 +160,24 @@ namespace MunicipalServicesApp
             LocalEventsForm events = new LocalEventsForm();
             events.ShowDialog();
             Show();
+        }
+
+        // ADDED: opens the Service Request Status form (this method was missing)
+        private void btnServiceStatus_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Hide();
+                ServiceRequestStatusForm statusForm = new ServiceRequestStatusForm();
+                statusForm.ShowDialog();
+                Show();
+            }
+            catch (Exception ex)
+            {
+                Show();
+                MessageBox.Show("Unable to open the Service Request Status form.\n\n" + ex.Message,
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
